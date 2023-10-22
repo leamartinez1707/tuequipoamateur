@@ -1,0 +1,69 @@
+<div class="header mb-4 text-center bg-secondary text-white">
+    <h1 class="p-3">Real time products</h1>
+</div>
+
+<div class="container">
+
+    <div class="card offset-md-3 mb-5 col-md-6">
+        <div class="card-header text-center">
+            <h2>Crea tu producto</h2>
+        </div>
+        <div class="card-body">
+            <form id="formulario">
+                <div class="m-3">
+                    <input type="text" class="form-control" name="title" id="title" placeholder="Titulo" required />
+                </div>
+                <div class="m-3">
+                    <input type="text" class="form-control" name="description" id="description"
+                        placeholder="Descripcion" required />
+                </div>
+                <div class="m-3">
+                    <input type="number" class="form-control" name="price" id="price" placeholder="Precio $" required />
+                </div>
+                <div class="m-3">
+                    <input type="text" class="form-control" name="code" id="code" placeholder="Codigo" required />
+                </div>
+                <div class="m-3">
+                    <input type="text" class="form-control" name="category" id="category" placeholder="Categoria"
+                        required />
+                </div>
+                <div class="m-3">
+                    <input type="number" class="form-control" name="stock" id="stock" placeholder="Stock" required />
+                </div>
+                <div class="m-3">
+                    <input type="text" class="form-control" name="thumbnail" id="thumbnail" placeholder="Imagenes"
+                        required />
+                </div>
+                <button type="submit" class="btn btn-danger form-control justify-content-center mb-2"
+                    id="addProduct">Agregar producto</button>
+            </form>
+        </div>
+    </div>
+
+    <table class="table table-white table-striped">
+        <thead class="fw-bold">
+            <tr>
+            <td>ID</td>
+            <td>Título</td>
+            <td>Descripción</td>
+            <td>Precio</td>
+            <td>Categoria</td>
+            <td>Stock</td>
+            <td>Code</td>
+            </tr>
+        </thead>
+        <tbody  id="table-body">
+
+        </tbody>
+
+
+    </table>
+
+
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTime.js"></script>
